@@ -13,7 +13,7 @@ function RestaurantEntry(props) {
     };
 
     return (
-        <div style={entryStyle} onClick={handleClick}>
+        <div style={entryStyle} onClick={handleClick} className="Restaurant-entry">
         {props.data.name}
         </div>
     );
@@ -25,12 +25,11 @@ function RestaurantList(props) {
       return <RestaurantEntry data={entry} onClickHandler={props.onClickHandler} key={Math.random()}></RestaurantEntry>
     });
     return (
-      <div id="restaurant-list" style={ {'display': 'grid'} } >
+      <div id="restaurant-list" style={ {'display': 'grid'} } className="Restaurant-list">
       {list}
       </div>
     )
   }
-  
 
 export default RestaurantList;
 
